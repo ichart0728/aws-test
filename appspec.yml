@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /
+permissions:
+  - object: /
+    pattern: "**"
+    owner: fuga
+    group: fuga
+hooks:
+  ApplicationStart:
+    - location: changePermission.sh
